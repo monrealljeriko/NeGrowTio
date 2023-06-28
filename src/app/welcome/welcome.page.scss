@@ -1,0 +1,74 @@
+// main
+#container {
+    text-align: center;
+    background: #FFF;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+// content
+.img-container {
+    position: relative;
+    bottom: 30px;
+}
+.img-container img {
+    width: 425px;
+    height: 400px;
+    opacity: 70%;
+}
+.ctt-container {
+    position: relative;
+    bottom: 100px;
+    background-color: #fff;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.ctt-container h1 {
+    padding-top: 50px;
+    color: #B2D19A;
+    font-size: 47px;
+    font-weight: 700;
+    line-height: 133.9%;
+}
+
+.ctt-container p {
+    color: #57708C;
+    font-size: 16px;
+    line-height: 133.9%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+// buttons
+.btn-container {
+    position: relative;
+    
+}
+ion-button {
+    margin-top: 10%;
+    width: 155px;
+    height: 45px;
+    border-radius: 25px;
+    text-transform: initial;
+}
+.btn-container .login-btn {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    z-index: 2;
+    --background: #57708C;
+}
+.btn-container .notmember-btn {
+    position: relative;
+    border: 1px solid #57708C;
+    --background: #fff;
+    --padding-start: 50px;
+    color: #57708C;
+    top: 0;
+    left: 15%;
+    width: 200px;
+    z-index: 1;
+}

@@ -1,0 +1,36 @@
+#container {
+    text-align: center;
+    background: #FFF;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#container h1 {
+    color: #57708C;
+    text-align: center;
+    font-size: 48px;
+    font-family: Montserrat;
+    font-weight: 700;
+    line-height: 133.9%;
+}
+.btn-container {
+    margin-top: 30px;
+    top: 200px;
+    position: relative;
+}
+
+.btn-container .start-btn {
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    --background: #57708C;   
+    text-transform: initial;
+    color: #FFF;
+    font-size: 20px;
+}
+ion-icon {
+    padding-left: 60px;
+}
+

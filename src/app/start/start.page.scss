@@ -15,22 +15,22 @@
     font-weight: 700;
     line-height: 133.9%;
 }
+ion-button {
+    margin-top: 10%;
+    width: 155px;
+    height: 45px;
+    border-radius: 25px;
+    text-transform: initial;
+    --background: #57708C;   
+    color: #FFF;
+}
 .btn-container {
-    margin-top: 30px;
-    top: 200px;
+    top: 190px;
     position: relative;
 }
 
-.btn-container .start-btn {
-    width: 200px;
-    height: 50px;
-    border-radius: 25px;
-    --background: #57708C;   
-    text-transform: initial;
-    color: #FFF;
-    font-size: 20px;
-}
 ion-icon {
-    padding-left: 60px;
+    font-size: 18px;
+    padding-left: 40px;
 }
 

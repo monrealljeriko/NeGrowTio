@@ -1,6 +1,6 @@
 # NeGrowTio: A Lending Management System For Public Market Vendors And The Community In San Jose Batangas
 
-Introduction
+**Introduction**
   The digital revolution has compelled organizations to reevaluate their business strategies and invest in digital transformation. However, a common mistake is assuming that purchasing technology alone will lead to transformation. It is crucial to have the right processes, culture, and talent in place to effectively utilize technology. Without these elements, even the best technology will not yield desired results. When examining SME finance, it is important to consider the decision-making process that shapes their financial structures. While financing options and preferences change as small businesses evolve, existing approaches often fail to explain how these decisions are made. For female entrepreneurs, motivations such as creativity, innovation, self-identity, independence, and societal contribution drive their venture creation. However, their professional capabilities as entrepreneurs are often not fully recognized or acknowledged by society.
 
   Digital infrastructure and technology have become increasingly prominent and essential in a variety of industries. However, many market vendors, including lenders, still don't have access to such resources. Internet coverage may be inadequate or non-existent in some areas, particularly in rural ones. Additionally, some vendors may be unfamiliar with digital platforms and applications, which makes it difficult for them to embrace or use such technologies. Since market vendors and lenders have limited access to digital infrastructure and technology, they are unable to take advantage of the benefits that these advances in technology provide.
@@ -9,8 +9,24 @@ Introduction
 
   The NeGrowTio will enable market sellers to manage their loans, and keep track of data and payment schedules. Additionally, it will give administrators the capacity to monitor borrowers' financial records, including capital, interest, and other vital data that must be gathered. With this, it will focus on the module under the computation of finance charges and the total of deductions from proceeds of loans and the net proceeds from loan. To address the computation of finance charges, deductions from loan proceeds, and the calculation of net proceeds from loans. This solution will streamline the process of handling finance charges and deductions, ensuring accurate calculations and efficient management of loan proceeds. Implement an algorithm to automatically compute finance charges based on the loan type, interest rate, and payment history. The system should consider variables such as compounding frequency and any additional fees associated with the loan. It Facilitate seamless integration with existing accounting systems, allowing for the transfer of loan data, finance charges, deductions, and net proceeds. This integration will enhance financial record-keeping and ensure consistency across all financial processes.
 
-SDG
+**SDG**
   The SDG which this project aims to attain is Decent Work and Economic Growth. Public vendors are often small business owners who face challenges in accessing capital to finance their businesses, which can limit their ability to grow and create jobs. In addition, the system can help promote decent work by enabling vendors to invest in their businesses, improve their working conditions, and increase their incomes. Furthermore, it can help promote financial inclusion by providing access to credit for those who may not have traditional banking relationships. This can help reduce poverty and support economic growth by enabling individuals and small businesses to participate more fully in the economy.
 
-Goal 8: Decent Work and Economic Growth
+**Goal 8: Decent Work and Economic Growth**
 ![SDG8](https://github.com/monrealljeriko/NeGrowTio-LMS/assets/137249168/560b8703-32a6-4839-8045-a037fe12fa5d)
+
+ **Purpose and Description**
+   NeGrowTio aims to streamline the process of calculating finance charges, ensuring accuracy and transparency in financial transactions. By focusing on this specific module, NeGrowTio aims to simplify and automate the complex calculations involved in determining finance charges, making it easier for vendors and the community to manage their lending activities. The system incorporates intelligent algorithms to ensure accurate calculations based on the specific parameters of each loan. Users can generate detailed reports and statements, providing a transparent overview of the finance charges associated with each lending transaction.
+
+   NeGrowTio focuses on the computation of finance charges; showing all on the loan type, interest rate, and payment history. The system should consider variables such as compounding frequency and any additional fees associated with the loan. It Facilitate seamless integration with existing accounting systems, allowing for the transfer of loan data, finance charges, deductions, and net proceeds. To enhance financial record-keeping and ensure accurate consistency across all the financial processes.
+
+**Significance of the Proposed Project**
+  The proposed project, NeGrowTio, aims to develop a comprehensive lending management system specifically tailored for public market vendors and the community in San Jose, Batangas. This system will provide efficient and transparent financial services, with a particular focus on the module for calculating finance charges. With this, the proponents are going to make use of the compliance technology through which the project is made.
+
+  Focusing on the calculation of financial charges, NeGrowTio displays all information on loan kind variables like compounding frequency and any additional loan-related fees should be taken into account by the system. Allowing for the transfer of loan information, finance charges, deductions, and net proceeds, it facilitates smooth connection with existing accounting systems. For the following individuals, this study is extremely important:
+
+  **Staff**. The purpose of NeGrowTio is to give a more reliable and and better service to the client. To utilize the system to apply for loans, as well as the staff and manager who run the system and make lending decisions, to give a good transactions and keep data.
+
+  **Proponents**. The proponents of this application can also gain from the project because it helps them develop their abilities and minds, which leads to the development of a more practical and imaginative web application. Working together, the proponents have become better at working together and at managing their time to complete tasks that would result in positive outcomes.
+
+  **Future Researchers**. Students who are about to start conducting research study toward them. It may serve as an affirmation of them. Specifically to those proposed a web application which are linked to Lending Management Web Application.

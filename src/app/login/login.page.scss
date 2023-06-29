@@ -1,0 +1,61 @@
+ // main
+ #container {
+    text-align: center;
+    background: #FFF;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+h1 {
+    padding-top: 30px;
+    color: #57708C;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 133.9%;
+}
+
+.login-form {
+    margin: 20px;
+    padding-top: 10px;
+}
+ion-item {
+    margin: 20px;
+   /*  border-radius: 15px;
+    border: 2px solid #57708C; */
+}
+ion-item input.input-has-focus {
+    border-color: #FF0000; /* Replace with your desired color */
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5); /* Replace with your desired box shadow */
+  }
+  
+  ion-item input.input-has-focus + .input-placeholder-floating {
+    color: #FF0000; /* Replace with your desired color */
+  }
+  
+ion-label {
+    color: #a4a4a4;
+}
+ion-col a{
+    padding-left: 50px;
+    text-decoration: none;
+}
+ion-col #remember-me{
+    position: relative;
+    top:3px;
+    margin-right: 5px;
+    
+}
+ion-button {
+    margin-top: 10%;
+    width: 155px;
+    height: 45px;
+    --border-radius: 25px;
+    text-transform: initial;
+    --background: #57708C;
+
+}

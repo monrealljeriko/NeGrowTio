@@ -25,29 +25,22 @@ h1 {
 }
 ion-item {
     margin: 20px;
-   /*  border-radius: 15px;
-    border: 2px solid #57708C; */
+    border-radius: 15px;
+    border: 2px solid #57708C;
 }
-ion-item input.input-has-focus {
-    border-color: #FF0000; /* Replace with your desired color */
-    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5); /* Replace with your desired box shadow */
-  }
-  
-  ion-item input.input-has-focus + .input-placeholder-floating {
-    color: #FF0000; /* Replace with your desired color */
-  }
-  
-ion-label {
-    color: #a4a4a4;
+.custom-label {
+    --color: #a4a4a4;
 }
 ion-col a{
     padding-left: 50px;
     text-decoration: none;
+    color: darkcyan;
 }
 ion-col #remember-me{
     position: relative;
-    top:3px;
     margin-right: 5px;
+    width: 12px; /* Adjust the width */
+    height: 12px
     
 }
 ion-button {

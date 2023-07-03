@@ -25,9 +25,9 @@ And The Community In San Jose Batangas is the mobile version of its web applicat
 
 # About
 ## Team Members
-* [Gonzales, Angela Marie S.] https://github.com/angelagonzalesss
-* [Monreal, Jeriko L.] https://github.com/monrealljeriko
-* [Tag-at, Gerlie B.] https://github.com/Gerlie33
+* [Gonzales, Angela Marie S.](https://github.com/angelagonzalesss)
+* [Monreal, Jeriko L.](https://github.com/monrealljeriko)
+* [Tag-at, Gerlie B.](https://github.com/Gerlie33)
 
 # Others
 ## How to run the Project

@@ -16,5 +16,8 @@ export class WelcomePage implements OnInit {
     handleButtonLogin() {
         this.router.navigate(['./login']);
     }
+    handleButtonMemberReg() {
+        this.router.navigate(['./member-reg']);
+    }
 
 }

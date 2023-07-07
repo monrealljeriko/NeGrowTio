@@ -1,5 +1,5 @@
 # NeGrowTio: A Lending Management System For Public Market Vendors And The Community In San Jose Batangas
-![ngt header img](https://github.com/Gerlie33/NeGrowTio-LMS/assets/136683054/cd67101d-1975-4f6f-a942-ff4696de3042)
+![ngt-header-img](./src/assets/images/ngt-header-img.png)
 
 
 ## Overview
@@ -31,4 +31,3 @@ NeGrowTio: A Lending Management System For Public Market Vendors And The Communi
 * Clone this repository: `https://github.com/monrealljeriko/NeGrowTio-LMS.git`.
 * Run `npm install` from the project root.
 * Run `ionic serve` in a terminal from the project root.
-

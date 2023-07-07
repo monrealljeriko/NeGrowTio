@@ -1,16 +1,16 @@
 <ion-content [fullscreen]="true">
   <div id="container">
     <img src="assets/images/bg-login.png" alt="sanjose">
-    <h1>Hello<br>welcome back</h1>
+    <h1>Hello<br>Welcome back</h1>
 
     <form class="login-form" (keydown.enter)="logMeIn()">
       <ion-item lines="none">
-        <ion-label position="floating" class="custom-label">Email or username</ion-label>
-        <ion-input type="text" [clearInput]="true" [(ngModel)]="Username" name="username" required ></ion-input>
+        <!-- <ion-label position="floating" class="custom-label">Email or username</ion-label> -->
+        <ion-input type="text" labelPlacement="floating" label="Email or username" [clearInput]="true" [(ngModel)]="Username" name="username" required ></ion-input>
       </ion-item>
       <ion-item lines="none">
-        <ion-label position="floating" class="custom-label">Password</ion-label>
-        <ion-input type="password" [clearInput]="true" [(ngModel)]="Password" name="password" required></ion-input>
+        <!-- <ion-label position="floating" class="custom-label">Password</ion-label> -->
+        <ion-input type="password" labelPlacement="floating" label="Password" [clearInput]="true" [(ngModel)]="Password" name="password" required></ion-input>
       </ion-item>
       <ion-row>
         <ion-col>

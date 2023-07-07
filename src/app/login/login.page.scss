@@ -5,50 +5,51 @@
     position: absolute;
     left: 0;
     right: 0;
-}
-img {
+  }
+  img {
     width: 100%;
     height: auto;
-}
-h1 {
+  }
+  h1 {
     padding-top: 30px;
     color: #57708C;
     font-size: 28px;
     font-style: normal;
     font-weight: 700;
     line-height: 133.9%;
-}
-
-.login-form {
+  }
+  
+  .login-form {
     margin: 20px;
     padding-top: 10px;
-}
-ion-item {
+  }
+  .custom-input::placeholder {
+    color: #a4a4a4; 
+  }
+  ion-item {
     margin: 20px;
     border-radius: 15px;
     border: 2px solid #57708C;
-}
-.custom-label {
-    --color: #a4a4a4;
-}
-ion-col a{
+  }
+  
+  ion-col a{
     padding-left: 50px;
     text-decoration: none;
     color: darkcyan;
-}
-ion-col #remember-me{
+  }
+  ion-col #remember-me{
     position: relative;
     margin-right: 5px;
-    width: 12px; /* Adjust the width */
+    width: 12px;
     height: 12px
     
-}
-ion-button {
+  }
+  ion-button {
     margin-top: 10%;
     width: 155px;
     height: 45px;
     --border-radius: 25px;
     text-transform: initial;
     --background: #57708C;
-
-}
+  
+  }

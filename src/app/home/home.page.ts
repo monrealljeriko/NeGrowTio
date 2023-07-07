@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
 export class HomePage {
 
   constructor() {}
+   showLabel: boolean = false;
 
+  toggleLabel() {
+    this.showLabel = !this.showLabel;
+  }
 }

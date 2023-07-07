@@ -31,3 +31,9 @@ NeGrowTio: A Lending Management System For Public Market Vendors And The Communi
 * Clone this repository: `https://github.com/monrealljeriko/NeGrowTio-LMS.git`.
 * Run `npm install` from the project root.
 * Run `ionic serve` in a terminal from the project root.
+
+## Recommendations 
+* Online Payments: Integrate with popular payment gateways to facilitate online loan payments, such as PayPal, Gcash, or Paymaya. Implementation of secure transaction handling and encryption to ensure the safety of sensitive financial information.
+* Live Chat/Chatbot: Incorporate a live chat feature to enable real-time communication between borrowers and customer support representatives. Utilizing a chatbot to provide automated responses to frequently asked questions, loan status inquiries, or general support.
+* Risk Assessment for Company Bad Sales: Develop a risk assessment module that analyzes company financial data, credit history, and industry trends to determine the probability of bad sales. Implement algorithms or machine learning models to evaluate risk factors and generate risk scores for each loan application. 
+* Collateral Management for Borrowers: Establish a collateral management system to track and manage collateral provided by borrowers against their loans. Integrate collateral information with loan records, enabling administrators to monitor collateral status, release or transfer collateral when necessary, and handle any associated legal processes.

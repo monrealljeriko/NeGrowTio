@@ -6,6 +6,26 @@ const routes: Routes = [
   {
     path: '',
     component: HomePage,
+    children: [
+      {
+        path: 'loans',
+        loadChildren: () => import('../loans/loans.module').then( m => m.LoansPageModule)
+      },
+      {
+        path: 'landing',
+        loadChildren: () => import('../landing/landing.module').then( m => m.LandingPageModule)
+      },
+      {
+        path: '',
+        redirectTo: '/home/landing',
+        pathMatch: 'full'
+      }
+    ]
+  },
+  {
+    path: '',
+    redirectTo: '/home/landing',
+    pathMatch: 'full'
   }
 ];
 

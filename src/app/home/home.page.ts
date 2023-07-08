@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { IonTabs } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -8,13 +9,29 @@ import { Component } from '@angular/core';
 export class HomePage {
 
   constructor() {}
-   showLabel: boolean = false;
-   isModalOpen = false;
+  @ViewChild(IonTabs) tabs!: IonTabs;
 
-   setOpen(isOpen: boolean) {
-     this.isModalOpen = isOpen;
-   }
-  toggleLabel() {
-    this.showLabel = !this.showLabel;
+  showLabel: boolean = false;
+  activeTab: string = 'home';
+
+  toggleLabel(tab: string) {
+    if (this.activeTab !== tab) {
+      this.activeTab = tab;
+    }
+  }
+  
+
+  handleTabChange(event: any) {
+    const selectedTab = this.tabs.getSelected();
+    if (selectedTab !== 'home') {
+      this.blurInputElement();
+    }
+  }
+
+  blurInputElement() {
+    const inputElement = document.querySelector('ion-input');
+    if (inputElement) {
+      inputElement.blur();
+    }
   }
 }

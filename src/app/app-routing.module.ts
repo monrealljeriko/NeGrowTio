@@ -30,6 +30,10 @@ const routes: Routes = [
     path: 'loans',
     loadChildren: () => import('./loans/loans.module').then( m => m.LoansPageModule)
   },
+  {
+    path: 'landing',
+    loadChildren: () => import('./landing/landing.module').then( m => m.LandingPageModule)
+  },
 
 ];
 

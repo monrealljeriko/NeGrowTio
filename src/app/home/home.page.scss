@@ -1,41 +1,54 @@
-#container {
-
-  position: absolute;
- 
-}
-ion-header {
-  padding: 20px;
-  height: 12vh;
+ion-toolbar {
+  padding: 3em 2em 1em;
 }
 .ion-notif {
-  padding-left: 8rem;
   color: #57708C;
 }
-.ion-prof {
+
+/* .ion-prof {
   background-color: #57708C;
   border-radius: 50%;
   color: #fff;
   padding: 15px;
+} */
+.custom-icon {
+  font-size: 24px;
 }
-.header-sect {
-  width: 428px;
-  padding: 10px;
-  height: 120px;
+
+.custom-prof {
+  width: 50px;
+  height: 50px;
+}
+
+// ion toolbar
+.header-title {
+  color: #1E3B5A;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 133.9%;
+  letter-spacing: 1.28px;
+  text-transform: uppercase;
+} 
+
+// header amount
+.header-amt {
+  width: 100%;
+  padding: .5em .5em 0 1em;
   background: linear-gradient(89deg, #57708C 0%, #57708C 53.13%, #57708C 100%);
 }
-.header-sect h3 {
+.header-amt h3 {
   color: #FFF;
-  padding-left: 20px;
+  padding: 0 20px 0;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: 133.9%;
   letter-spacing: 1.92px;
 }
-.header-sect h1 {
-  padding: 20px;
-  margin-top: 0;
-  padding-top: 0;
+.header-amt h1 {
+  padding: 0 20px 20px;
+  margin: 0 0;
   color: #FFF;
   font-size: 32px;
   font-style: normal;
@@ -43,56 +56,81 @@ ion-header {
   line-height: 133.9%;
   letter-spacing: 2.56px;
 }
+
+// segment
+.custom-segment {
+  margin-top: 0;
+}
 .custom-lbl {
   text-transform: initial;
 }
 
-
-
-
-ion-col {
-  border: solid 1px #fff;
-  text-align: center;
+ion-segment-button::part(indicator-background) {
+  background: #E6F4F1;
 }
-.content-sect h1 {
-  padding-left: 35px;
-  color: #000;
-font-size: 24px;
-font-weight: 700;
-line-height: 133.9%;
-letter-spacing: 1.92px;
+/* Material Design styles */
+ion-segment-button.md::part(native) {
+  color: #57708C;
 }
-ion-toolbar {
-  display: grid;
-  grid-template-columns: min-content 1fr min-content;
-  align-items: center;
+.segment-button-checked.md::part(native) {
+  color: #08a391;
 }
-
-.header-title {
-  text-align: center;
+ion-segment-button.md::part(indicator-background) {
+  height: 4px;
 }
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+/* iOS styles */
+ion-segment-button.ios::part(native) {
+  color: #08a391;
+}
+.segment-button-checked.ios::part(native) {
+  color: #fff;
+}
+ion-segment-button.ios::part(indicator-background) {
+  border-radius: 20px;
 }
 
-#container p {
+// loan summary grid
+.custom-purpose {
+  color: #1E1E1E;
   font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 133.9%;
+  letter-spacing: 1.28px;
+}
+.custom-position {
+  text-align: right;
+}
+.custom-status {
+  padding-top: 0;
+  color: #000;
+  font-size: 12px;
+  font-style: normal;
+  letter-spacing: 0.96px;
+}
+ion-grid {
+  margin: 0 1.5em;
 }
 
-#container a {
-  text-decoration: none;
+.content-sect h1 {
+  padding: 0 1.5em;
+  margin-top: .5em;
+  color: #57708C;  
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 133.9%;
+  letter-spacing: 1.92px;
 }
 
+.content-logs {
+  height: 45vh;
+  overflow-y: auto;
+}
+
+// ion tabs
 ion-tab-bar {
-  border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+  border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 ion-tab-button{
   background: #57708C;
@@ -111,16 +149,7 @@ ion-tab-button{
   align-items: center;
 }
 
-ion-icon {
+.tab-button .icon-container ion-icon {
   margin-right: 5px;
-  font-size: 20px;
+  font-size: 25px;
 }
-
-ion-label {
-  position:relative;
-  top: 2px;
-  text-align: right;
-  font-size: 15px;
-
-}
-

@@ -1,0 +1,191 @@
+<ion-content [fullscreen]="true">
+  <ion-toolbar>
+    <ion-title class="header-title">Total Loans</ion-title>
+    <ion-buttons slot="end" id="popover-button">
+      <ion-icon name="add-circle-outline" class="ion-add" size="large"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+  
+  <!-- Button add dropdown -->
+  <ion-popover trigger="popover-button" [dismissOnSelect]="true">
+    <ng-template>
+      <ion-content >
+        <ion-list lines="none">
+          <ion-item [button]="true" [detail]="false" (click)="setOpen('applyLoan')" class="custom-itm">
+            <ion-icon name="navigate-outline"></ion-icon>
+            Apply Loan
+          </ion-item>
+          <ion-item [button]="true" [detail]="false" (click)="setOpen('loanCheck')" class="custom-itm">
+            <ion-icon name="checkmark-done-outline"></ion-icon>
+            Loan Check
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-popover>
+
+  <!-- modal apply loan ctt -->
+  <ion-modal [isOpen]="isModalOpen && selectedOption === 'applyLoan'">
+    <ng-template>
+        <ion-toolbar>
+          <ion-title>Apply Loan</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="setOpen('')">Close</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      <ion-content class="ion-padding">
+        <p>
+          Apply Loan Modal Content
+        </p>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <!-- modal loan check -->
+  <ion-modal [isOpen]="isModalOpen && selectedOption === 'loanCheck'">
+    <ng-template>
+      <ion-content>
+        <ion-toolbar>
+          <ion-title>Loan Check</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="setOpen('')">Close</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+        <ion-item>
+          <ion-label>Amount of Share</ion-label>
+          <ion-input type="number" [(ngModel)]="amountOfShare"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Loan Amount</ion-label>
+          <ion-input type="number" [(ngModel)]="loanAmount"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Interest</ion-label>
+          <ion-select [(ngModel)]="interestRate" (ionChange)="calculateTotals()">
+            <ion-select-option value="0.03">3%</ion-select-option>
+            <ion-select-option value="0.05">5%</ion-select-option>
+            <ion-select-option value="0.08">8%</ion-select-option>
+          </ion-select>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Term</ion-label>
+          <ion-select [(ngModel)]="term" (ionChange)="calculateTotals()">
+            <ion-select-option value="30">30 days</ion-select-option>
+            <ion-select-option value="60">60 days</ion-select-option>
+            <ion-select-option value="100">100 days</ion-select-option>
+          </ion-select>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Service Handling Charge</ion-label>
+          <ion-input type="number" [(ngModel)]="serviceHandlingCharge" (ionChange)="calculateTotals()"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Total Finance Charge</ion-label>
+          <ion-input type="number" [(ngModel)]="totalFinanceCharge" disabled></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Total Non Finance Charges</ion-label>
+          <ion-input type="number" [(ngModel)]="totalNonFinanceCharges" disabled></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Total Deduction Charge</ion-label>
+          <ion-input type="number" [(ngModel)]="totalDeductionCharge" disabled></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Net Proceeds from Loan</ion-label>
+          <ion-input type="number" [(ngModel)]="netProceedsFromLoan" disabled></ion-input>
+        </ion-item>
+      </ion-content>
+      
+    </ng-template>
+  </ion-modal>
+  
+  <!-- mid section -->
+  <div class="header-amt">
+    <h3>Amount</h3>
+    <h1>51,5107.00</h1>
+  </div>
+
+  <!-- ion tabs -->
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button expand="block" (click)="toggleLabel()" class="tab-button">
+        <div class="icon-container">
+          <ion-icon [name]="showLabel ? 'home' : 'home-outline'"></ion-icon>
+          <ion-label>{{ showLabel ? 'Home' : '' }}</ion-label>
+        </div>
+      </ion-tab-button>
+      <ion-tab-button tab="radio">
+        <ion-icon name="albums-outline"></ion-icon>
+        Loans
+      </ion-tab-button>
+      <ion-tab-button tab="radio">
+        <ion-icon name="timer-outline"></ion-icon>
+        Credit
+      </ion-tab-button>
+      <ion-tab-button tab="radio">
+        <ion-icon name="person-outline"></ion-icon>
+        Profile
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+
+  <!-- Segmet -->
+  <div class="content-sect">
+    <ion-segment value="custom">
+      <ion-segment-button value="Week">
+        <ion-label class="custom-lbl">Week</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="Month">
+        <ion-label class="custom-lbl">Month</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="Year">
+        <ion-label class="custom-lbl">Year</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+    
+    <!-- loan summary -->
+    <h1>Details</h1>
+    <ion-grid>
+      <ion-row>
+        <ion-col>Name of Purpose</ion-col>
+        <ion-col>php. 1,810.00</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>Name of Purpose</ion-col>
+        <ion-col>php. 1,810.00</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>Name of Purpose</ion-col>
+        <ion-col>php. 1,810.00</ion-col>
+      </ion-row>  
+      <ion-row>
+        <ion-col>Name of Purpose</ion-col>
+        <ion-col>php. 1,810.00</ion-col>
+      </ion-row><ion-row>
+        <ion-col>Name of Purpose</ion-col>
+        <ion-col>php. 1,810.00</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>Name of Purpose</ion-col>
+        <ion-col>php. 1,810.00</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>Name of Purpose</ion-col>
+        <ion-col>php. 1,810.00</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>Name of Purpose</ion-col>
+        <ion-col>php. 1,810.00</ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

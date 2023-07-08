@@ -35,7 +35,7 @@
         </ion-toolbar>
       <ion-content class="ion-padding">
         <p>
-          Apply Loan Modal Content
+          This section is under construction
         </p>
       </ion-content>
     </ng-template>
@@ -110,36 +110,38 @@
   
   <!-- mid section -->
   <div class="header-amt">
-    <h3>Amount</h3>
+    <h3>Balance</h3>
     <h1>51,5107.00</h1>
   </div>
 
-  <!-- ion tabs -->
-  <ion-tabs>
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button expand="block" (click)="toggleLabel()" class="tab-button">
-        <div class="icon-container">
-          <ion-icon [name]="showLabel ? 'home' : 'home-outline'"></ion-icon>
-          <ion-label>{{ showLabel ? 'Home' : '' }}</ion-label>
-        </div>
-      </ion-tab-button>
-      <ion-tab-button tab="radio">
-        <ion-icon name="albums-outline"></ion-icon>
-        Loans
-      </ion-tab-button>
-      <ion-tab-button tab="radio">
-        <ion-icon name="timer-outline"></ion-icon>
-        Credit
-      </ion-tab-button>
-      <ion-tab-button tab="radio">
-        <ion-icon name="person-outline"></ion-icon>
-        Profile
-      </ion-tab-button>
-    </ion-tab-bar>
-  </ion-tabs>
+  <!-- tabs -->
+  <div class="custom-tabs">
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button expand="block" (click)="toggleLabel()" class="tab-button">
+          <div class="icon-container">
+            <ion-icon [name]="showLabel ? 'home' : 'home-outline'"></ion-icon>
+            <ion-label>{{ showLabel ? 'Home' : '' }}</ion-label>
+          </div>
+        </ion-tab-button>
+        <ion-tab-button tab="radio">
+          <ion-icon name="albums-outline"></ion-icon>
+          Loans
+        </ion-tab-button>
+        <ion-tab-button tab="radio">
+          <ion-icon name="timer-outline"></ion-icon>
+          Credit
+        </ion-tab-button>
+        <ion-tab-button tab="radio">
+          <ion-icon name="person-outline"></ion-icon>
+          Profile
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </div>
 
   <!-- Segmet -->
-  <div class="content-sect">
+  <div class="custom-segment">
     <ion-segment value="custom">
       <ion-segment-button value="Week">
         <ion-label class="custom-lbl">Week</ion-label>
@@ -151,41 +153,86 @@
         <ion-label class="custom-lbl">Year</ion-label>
       </ion-segment-button>
     </ion-segment>
-    
-    <!-- loan summary -->
-    <h1>Details</h1>
-    <ion-grid>
-      <ion-row>
-        <ion-col>Name of Purpose</ion-col>
-        <ion-col>php. 1,810.00</ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>Name of Purpose</ion-col>
-        <ion-col>php. 1,810.00</ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>Name of Purpose</ion-col>
-        <ion-col>php. 1,810.00</ion-col>
-      </ion-row>  
-      <ion-row>
-        <ion-col>Name of Purpose</ion-col>
-        <ion-col>php. 1,810.00</ion-col>
-      </ion-row><ion-row>
-        <ion-col>Name of Purpose</ion-col>
-        <ion-col>php. 1,810.00</ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>Name of Purpose</ion-col>
-        <ion-col>php. 1,810.00</ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>Name of Purpose</ion-col>
-        <ion-col>php. 1,810.00</ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>Name of Purpose</ion-col>
-        <ion-col>php. 1,810.00</ion-col>
-      </ion-row>
-    </ion-grid>
+  </div>
+
+  <!-- loan content summary -->
+  <div class="content-sect">
+    <h1>Summary</h1>
+    <div class="content-logs">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="custom-purpose">Name of Purpose</ion-col>
+          <ion-col class="custom-purpose custom-position">1,810.00</ion-col>
+        </ion-row>
+        <ion-row class="custom-row">
+          <ion-col class="custom-status">Status</ion-col>
+          <ion-col class="custom-status custom-position">00/00/00</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="custom-purpose">Name of Purpose</ion-col>
+          <ion-col class="custom-purpose custom-position">1,810.00</ion-col>
+        </ion-row>
+        <ion-row class="custom-row">
+          <ion-col class="custom-status">Status</ion-col>
+          <ion-col class="custom-status custom-position">00/00/00</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="custom-purpose">Name of Purpose</ion-col>
+          <ion-col class="custom-purpose custom-position">1,810.00</ion-col>
+        </ion-row>
+        <ion-row class="custom-row">
+          <ion-col class="custom-status">Status</ion-col>
+          <ion-col class="custom-status custom-position">00/00/00</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="custom-purpose">Name of Purpose</ion-col>
+          <ion-col class="custom-purpose custom-position">1,810.00</ion-col>
+        </ion-row>
+        <ion-row class="custom-row">
+          <ion-col class="custom-status">Status</ion-col>
+          <ion-col class="custom-status custom-position">00/00/00</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="custom-purpose">Name of Purpose</ion-col>
+          <ion-col class="custom-purpose custom-position">1,810.00</ion-col>
+        </ion-row>
+        <ion-row class="custom-row">
+          <ion-col class="custom-status">Status</ion-col>
+          <ion-col class="custom-status custom-position">00/00/00</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="custom-purpose">Name of Purpose</ion-col>
+          <ion-col class="custom-purpose custom-position">1,810.00</ion-col>
+        </ion-row>
+        <ion-row class="custom-row">
+          <ion-col class="custom-status">Status</ion-col>
+          <ion-col class="custom-status custom-position">00/00/00</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="custom-purpose">Name of Purpose</ion-col>
+          <ion-col class="custom-purpose custom-position">1,810.00</ion-col>
+        </ion-row>
+        <ion-row class="custom-row">
+          <ion-col class="custom-status">Status</ion-col>
+          <ion-col class="custom-status custom-position">00/00/00</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="custom-purpose">Name of Purpose</ion-col>
+          <ion-col class="custom-purpose custom-position">1,810.00</ion-col>
+        </ion-row>
+        <ion-row class="custom-row">
+          <ion-col class="custom-status">Status</ion-col>
+          <ion-col class="custom-status custom-position">00/00/00</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="custom-purpose">Name of Purpose</ion-col>
+          <ion-col class="custom-purpose custom-position">1,810.00</ion-col>
+        </ion-row>
+        <ion-row class="custom-row">
+          <ion-col class="custom-status">Status</ion-col>
+          <ion-col class="custom-status custom-position">00/00/00</ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
   </div>
 </ion-content>

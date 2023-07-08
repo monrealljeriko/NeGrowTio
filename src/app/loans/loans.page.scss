@@ -1,6 +1,5 @@
 ion-toolbar {
-    padding: 40px 20px;
-    height: 12vh;
+  padding: 3em 2em 1em;
 }
 .ion-add {
   color: #57708C;
@@ -9,7 +8,7 @@ ion-toolbar {
 // ion toolbar
 .header-title {
   color: #57708C;
-  font-size: 32px;
+  font-size: 29px;
   font-style: normal;
   font-weight: 700;
   line-height: 133.9%;
@@ -25,13 +24,12 @@ ion-toolbar {
 }
 .header-amt {
   width: 100%;
-  padding: 10px;
-  height: 15vh;
+  padding: .5em .5em 0 1em;
   background: linear-gradient(89deg, #57708C 0%, #57708C 53.13%, #57708C 100%);
 }
 .header-amt h3 {
   color: #FFF;
-  padding-left: 20px;
+  padding: 0 20px 0;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -39,9 +37,8 @@ ion-toolbar {
   letter-spacing: 1.92px;
 }
 .header-amt h1 {
-  padding: 20px;
-  margin-top: 0;
-  padding-top: 0;
+  padding: 0 20px 20px;
+  margin: 0 0;
   color: #FFF;
   font-size: 32px;
   font-style: normal;
@@ -49,49 +46,95 @@ ion-toolbar {
   line-height: 133.9%;
   letter-spacing: 2.56px;
 }
+
 // segment
+.custom-lbl {
+  text-transform: initial;
+}
+ion-segment-button::part(indicator-background) {
+  background: #E6F4F1;
+}
+
+/* Material Design styles */
+ion-segment-button.md::part(native) {
+  color: #57708C;
+}
+
+.segment-button-checked.md::part(native) {
+  color: #08a391;
+}
+
+ion-segment-button.md::part(indicator-background) {
+  height: 4px;
+}
+
+/* iOS styles */
+ion-segment-button.ios::part(native) {
+  color: #08a391;
+}
+
+ // loan summary grid
+.custom-purpose {
+  color: #1E1E1E;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 133.9%;
+  letter-spacing: 1.28px;
+}
+.custom-position {
+  text-align: right;
+}
+.custom-status {
+  padding-top: 0;
+  color: #000;
+  font-size: 12px;
+  font-style: normal;
+  letter-spacing: 0.96px;
+}
+ion-grid {
+  margin: 0 1.5em;
+}
+
 .content-sect h1 {
-    padding-left: 35px;
-    color: #000;
+  padding: 0 1.5em;
+  margin-top: .5em;
+  color: #57708C;  
   font-size: 24px;
   font-weight: 700;
   line-height: 133.9%;
   letter-spacing: 1.92px;
-  }
-  
-  .custom-lbl {
-    text-transform: initial;
-  }
+}
 
-  // loan summary grid
-  ion-col {
-    border: solid 1px #fff;
-    text-align: center;
-  }
+.content-logs {
+  height: 45vh;
+  overflow-y: auto;
+}
 
-  // ion tabs
-  ion-tab-bar {
-    border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
-  }
-  ion-tab-button{
-    background: #57708C;
-    color: #FFF;
-    
-  }
-  .tab-button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+
+// ion tabs
+ion-tab-bar {
+  border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+ion-tab-button{
+  background: #57708C;
+  color: #FFF;
   
-  .icon-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  
-  .tab-button .icon-container ion-icon {
-    margin-right: 5px;
-    font-size: 25px;
-  }
+}
+.tab-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.tab-button .icon-container ion-icon {
+  margin-right: 5px;
+  font-size: 25px;
+}

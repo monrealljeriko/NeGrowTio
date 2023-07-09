@@ -20,7 +20,7 @@ NeGrowTio: A Lending Management System For Public Market Vendors And The Communi
 
 # About
 ## Team Members
-* [Gonzales, Angela Marie s.](https://github.com/angelagonzalesss20)
+* [Gonzales, Angela Marie S.](https://github.com/angelagonzalesss20)
 * [Monreal, Jeriko L.](https://github.com/monrealljeriko)
 * [Tag-at, Gerlie B.](https://github.com/Gerlie33)
 
@@ -36,4 +36,4 @@ NeGrowTio: A Lending Management System For Public Market Vendors And The Communi
 * Online Payments: Integrate with popular payment gateways to facilitate online loan payments, such as PayPal, Gcash, or Paymaya. Implementation of secure transaction handling and encryption to ensure the safety of sensitive financial information.
 * Live Chat/Chatbot: Incorporate a live chat feature to enable real-time communication between borrowers and customer support representatives. Utilizing a chatbot to provide automated responses to frequently asked questions, loan status inquiries, or general support.
 * Risk Assessment for Company Bad Sales: Develop a risk assessment module that analyzes company financial data, credit history, and industry trends to determine the probability of bad sales. Implement algorithms or machine learning models to evaluate risk factors and generate risk scores for each loan application. 
-* Collateral Management for Borrowers: Establish a collateral management system to track and manage collateral provided by borrowers against their loans. Integrate collateral information with loan records, enabling administrators to monitor collateral status, release or transfer collateral when necessary, and handle any associated legal processes.
+* Collateral Management for Borrowers: Establish a collateral management system to track and manage collateral provided by borrowers with regards to their loans. Integrate collateral information with loan records, enabling administrators to monitor collateral status, release or transfer collateral when necessary, and handle any associated legal processes.

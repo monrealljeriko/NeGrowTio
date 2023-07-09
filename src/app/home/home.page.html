@@ -15,7 +15,7 @@
         <ion-label>{{ activeTab === 'loans' ? 'Loans' : '' }}</ion-label>
       </div>
     </ion-tab-button>
-    <ion-tab-button  class="tab-button" (click)="toggleLabel('credit')" [class.active]="activeTab === 'credit'">
+    <ion-tab-button  class="tab-button" (click)="toggleLabel('credit')" [class.active]="activeTab === 'credit'" tab="credit">
       <div class="icon-container">
         <ion-icon [name]="activeTab === 'credit' ? 'timer' : 'timer-outline'"></ion-icon>
         <ion-label>{{ activeTab === 'credit' ? 'Credit' : '' }}</ion-label>

@@ -1,0 +1,132 @@
+// ion toolbar
+ion-toolbar {
+    padding: 3em 1em 1em;
+}
+.ion-info {
+    color: #57708C;
+    padding-right: .5em;
+  }
+
+.header-title {
+    color: #57708C;
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 133.9%;
+    letter-spacing: 2.56px;
+}
+
+// segment
+.custom-lbl {
+    text-transform: initial;
+    font-size: 20px;
+  }
+  ion-segment-button::part(indicator-background) {
+    background: #E6F4F1;
+  }
+  
+  /* Material Design styles */
+  ion-segment-button.md::part(native) {
+    color: #57708C;
+  }
+  
+  .segment-button-checked.md::part(native) {
+    color: #08a391;
+  }
+  
+  ion-segment-button.md::part(indicator-background) {
+    height: 4px;
+  }
+  
+  /* iOS styles */
+  ion-segment-button.ios::part(native) {
+    color: #08a391;
+  }
+
+  // amount section
+ /*  .header-amt {
+    width: 100%;
+  } */
+  .header-amt h3 {
+    color: #57708C;
+    padding: 0 20px 0;
+    font-size: 24px;
+    font-style: normal;
+    text-align: center;
+    font-weight: 600;
+    line-height: 133.9%;
+    letter-spacing: 1.92px;
+  }
+  .header-amt h1 {
+    padding: 0 20px 20px;
+    margin: 0 0;
+    color: #57708C;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 133.9%;
+    letter-spacing: 2.56px;
+  }
+
+  .circle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em 1em;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    border: 10px solid #57708C;
+  }
+  
+  .number {
+    font-size: 48px;
+    font-weight: 600;
+    color: #57708C;
+  }
+  
+// content breakdown
+
+.custom-purpose {
+  color: #1E1E1E;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 1.28px;
+}
+.custom-position {
+  text-align: right;
+}
+.custom-status {
+  padding-top: 0;
+  color: #000;
+  font-size: 12px;
+  font-style: normal;
+  letter-spacing: 0.96px;
+}
+ion-grid {
+  margin: 0 1.1em 0;
+}
+
+.content-sect h1 {
+  padding: .5em 1.5em;
+  margin-top: .5em;
+  color: #57708C;  
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 133.9%;
+  letter-spacing: 1.92px;
+  font-style: normal;
+}
+
+.content-logs {
+  height: 30vh;
+  overflow-y: auto;
+}
+

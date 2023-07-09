@@ -16,6 +16,10 @@ const routes: Routes = [
         loadChildren: () => import('../landing/landing.module').then( m => m.LandingPageModule)
       },
       {
+        path: 'credit',
+        loadChildren: () => import('../credit/credit.module').then( m => m.CreditPageModule)
+      },
+      {
         path: '',
         redirectTo: '/home/landing',
         pathMatch: 'full'

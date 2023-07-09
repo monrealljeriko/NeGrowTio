@@ -1,0 +1,311 @@
+<ion-content [fullscreen]="true" scrollY="false">
+  <ion-toolbar>
+    <ion-title class="header-title">Performace</ion-title>
+    <ion-buttons slot="end">
+      <ion-buttons slot="end" (click)="setOpen(true)">
+        <ion-icon name="information-circle-outline" class="ion-info" size="large"></ion-icon>
+      </ion-buttons>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <!-- modal notification -->
+  <ion-modal [isOpen]="isModalOpen">
+    <ng-template>
+      <ion-toolbar>
+        <ion-title>More about credit<br> and share</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="setOpen(false)">Close</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+      <ion-content>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Understanding Credit</ion-card-title>
+          </ion-card-header>
+      
+          <ion-card-content>
+            <p>
+              Your credit history and credit score are crucial factors that lenders and creditors consider when determining
+              your creditworthiness. It's important to understand how to improve and maintain good credit performance.
+            </p>
+          </ion-card-content>
+        </ion-card>
+      
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Improving Credit</ion-card-title>
+          </ion-card-header>
+      
+          <ion-card-content>
+            <ul>
+              <li>Pay your bills on time: Late payments can negatively impact your credit score.</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</li>
+            </ul>
+          </ion-card-content>
+        </ion-card>
+      
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Maintaining Good Credit Performance</ion-card-title>
+          </ion-card-header>
+      
+          <ion-card-content>
+            <ul>
+              <li>Pay your bills on time: Late payments can negatively impact your credit score.</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</li>
+            </ul>
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+  
+  <!-- segment -->
+  <div class="custom-segment">
+    <ion-segment value="custom" [(ngModel)]="selectedSegment">
+      <ion-segment-button value="credit">
+        <ion-label class="custom-lbl">Credit</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="shares">
+        <ion-label class="custom-lbl">Shares</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  
+  <!-- Content for the Credit segment -->
+  <div *ngIf="selectedSegment === 'credit'" class="header-amt">
+    <h3>Available</h3>
+    <div class="circle-container">
+      <div class="circle">
+        <span class="number">500</span>
+      </div>
+    </div>
+
+    <!-- credit content summary -->
+    <div class="content-sect">
+      <h1>Breakdown</h1>
+      <div class="content-logs">
+        <ion-grid>
+          <ion-row>
+            <ion-col class="custom-purpose">+20</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+20</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+20</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+20</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+20</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+20</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+20</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+20</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+20</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+20</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+20</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+20</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+20</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+20</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+20</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+20</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+20</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+20</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+20</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Content for the Shares segment -->
+  <div *ngIf="selectedSegment === 'shares'" class="header-amt"> 
+    <h3>Total Share</h3>
+    <div class="circle-container">
+      <div class="circle">
+        <span class="number">60,000</span>
+      </div>
+    </div>
+    <!-- credit content summary -->
+    <div class="content-sect">
+      <h1>Breakdown</h1>
+      <div class="content-logs">
+        <ion-grid>
+          <ion-row>
+            <ion-col class="custom-purpose">+3,000</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+2,000</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+2,500</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+6,000</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+4,500</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+3,000</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+2,000</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+2,500</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+6,000</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+4,500</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+3,000</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+2,000</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+2,500</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+6,000</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+4,500</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+3,000</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+2,000</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+2,500</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+6,000</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+4,500</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+3,000</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+2,000</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+2,500</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+6,000</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+4,500</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+3,000</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+2,000</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+2,500</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+6,000</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="custom-purpose">+4,500</ion-col>
+            <ion-col class="custom-purpose custom-position">01/01/01</ion-col>
+          </ion-row>
+
+        </ion-grid>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

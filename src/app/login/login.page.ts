@@ -16,7 +16,7 @@ export class LoginPage {
   async logMeIn() {
     if (this.Username === 'borrower' && this.Password === 'loan1234') {
       // Redirect to home page
-      this.router.navigate(['loans']);
+      this.router.navigate(['home']);
     } else {
       // Show error message for invalid credentials
       await this.showAlert('Invalid Credentials', 'Please enter valid username and password.');

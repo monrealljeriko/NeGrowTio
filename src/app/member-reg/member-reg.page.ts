@@ -38,4 +38,9 @@ export class MemberRegPage {
 
     await alert.present();
   }
+  isModalOpen = false;
+  setOpen(isOpen: boolean) {
+    this.isModalOpen = isOpen;
+  }
+  
 }

@@ -21,7 +21,7 @@
         <ion-label>{{ activeTab === 'credit' ? 'Credit' : '' }}</ion-label>
       </div>
     </ion-tab-button>
-    <ion-tab-button  class="tab-button" (click)="toggleLabel('profile')" [class.active]="activeTab === 'profile'">
+    <ion-tab-button  class="tab-button" (click)="toggleLabel('profile')" [class.active]="activeTab === 'profile'" tab="profile">
       <div class="icon-container">
         <ion-icon [name]="activeTab === 'profile' ? 'person' : 'person-outline'"></ion-icon>
         <ion-label>{{ activeTab === 'profile' ? 'Profile' : '' }}</ion-label>

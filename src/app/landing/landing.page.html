@@ -1,21 +1,21 @@
 <ion-content [fullscreen]="true">
   <ion-toolbar>
-    <ion-buttons slot="start">
+    <ion-buttons slot="start" (click)="goToProfile()">
       <img src="assets/icon/icon-profile.png" alt="profile" class="custom-prof">
       <!-- <ion-icon name="person-outline" class="ion-prof"></ion-icon> -->
     </ion-buttons>
     <ion-title class="header-title">John Doe</ion-title>
-    <ion-buttons slot="end" (click)="setOpen(true)">
+    <ion-buttons slot="end" (click)="setOpen('notif')">
       <ion-icon name="notifications" class="ion-notif custom-icon"></ion-icon>
     </ion-buttons>
   </ion-toolbar>
 
-  <ion-modal [isOpen]="isModalOpen">
+  <ion-modal [isOpen]="isModalOpen && selectedOption === 'notif'">
     <ng-template>
       <ion-toolbar>
         <ion-title>Notifications</ion-title>
         <ion-buttons slot="end">
-          <ion-button (click)="setOpen(false)">Close</ion-button>
+          <ion-button (click)="setOpen('')">Close</ion-button>
         </ion-buttons>
       </ion-toolbar>
       <ion-content class="ion-padding">
@@ -34,22 +34,22 @@
 
   <!-- Segmet -->
   <div class="custom-segment">
-    <ion-segment value="custom">
+    <ion-segment value="custom" [(ngModel)]="selectedSegment">
       <ion-segment-button value="Week">
-        <ion-label class="custom-lbl">Week</ion-label>
+        <ion-label class="custom-lbl">Day</ion-label>
       </ion-segment-button>
       <ion-segment-button value="Month">
-        <ion-label class="custom-lbl">Month</ion-label>
+        <ion-label class="custom-lbl">Week</ion-label>
       </ion-segment-button>
       <ion-segment-button value="Year">
-        <ion-label class="custom-lbl">Year</ion-label>
+        <ion-label class="custom-lbl">Month</ion-label>
       </ion-segment-button>
     </ion-segment>
   </div>
 
   <!-- loan content summary -->
-  <div class="content-sect">
-    <h1>Summary</h1>
+  <div class="content-sect" *ngIf="selectedSegment === 'Week'">
+    <h1>Summary Day</h1>
     <div class="content-logs">
       <ion-grid>
         <ion-row>
@@ -151,4 +151,85 @@
       </ion-grid>
     </div>
   </div>
+  <!-- loan content summary month-->
+  <div class="content-sect" *ngIf="selectedSegment === 'Month'">
+    <h1>Summary Week</h1>
+    <div class="content-logs">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="custom-purpose">Name of Purpose</ion-col>
+          <ion-col class="custom-purpose custom-position">1,810.00</ion-col>
+        </ion-row>
+        <ion-row class="custom-row">
+          <ion-col class="custom-status">Status</ion-col>
+          <ion-col class="custom-status custom-position">00/00/00</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="custom-purpose">Name of Purpose</ion-col>
+          <ion-col class="custom-purpose custom-position">1,810.00</ion-col>
+        </ion-row>
+        <ion-row class="custom-row">
+          <ion-col class="custom-status">Status</ion-col>
+          <ion-col class="custom-status custom-position">00/00/00</ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+  <!-- loan content summary monrh-->
+  <div class="content-sect" *ngIf="selectedSegment === 'Year'">
+    <h1>Summary Month</h1>
+    <div class="content-logs">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="custom-purpose">Name of Purpose</ion-col>
+          <ion-col class="custom-purpose custom-position">1,810.00</ion-col>
+        </ion-row>
+        <ion-row class="custom-row">
+          <ion-col class="custom-status">Status</ion-col>
+          <ion-col class="custom-status custom-position">00/00/00</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="custom-purpose">Name of Purpose</ion-col>
+          <ion-col class="custom-purpose custom-position">1,810.00</ion-col>
+        </ion-row>
+        <ion-row class="custom-row">
+          <ion-col class="custom-status">Status</ion-col>
+          <ion-col class="custom-status custom-position">00/00/00</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="custom-purpose">Name of Purpose</ion-col>
+          <ion-col class="custom-purpose custom-position">1,810.00</ion-col>
+        </ion-row>
+        <ion-row class="custom-row">
+          <ion-col class="custom-status">Status</ion-col>
+          <ion-col class="custom-status custom-position">00/00/00</ion-col>
+        </ion-row>
+      </ion-grid>
+      
+    </div>
+  </div> 
+
+  <!-- fab -->
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="setOpen('survey')">
+      <ion-icon name="reader-outline" class="custom-icon"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-modal [isOpen]="isModalOpen && selectedOption === 'survey'">
+    <ng-template>
+      <ion-toolbar>
+        <ion-title>Survey</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="setOpen('')">Close</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+      <ion-content class="ion-padding">
+        <p>
+          This section is under construction
+        </p>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
 </ion-content>

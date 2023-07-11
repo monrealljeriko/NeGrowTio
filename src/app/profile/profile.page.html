@@ -1,0 +1,26 @@
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-toolbar>
+      <ion-title class="header-title">Profile</ion-title>
+      <img src="assets/icon/icon-profile.png" alt="profile" class="custom-prof">
+      
+    </ion-toolbar>
+
+    <strong>Ming Ming</strong>
+    <ion-icon name="create-outline" class="custom-icon"></ion-icon>
+    <p>Member Since</p>
+
+    <div class="information">
+      <p>Birthday</p>
+      <p>Adress</p>
+      <p>Number</p>
+      <p>Account</p>
+      <div class="centered-item">
+        <ion-item [button]="true" (click)="logMeOut()" lines="none">
+          Logout
+          </ion-item>
+      </div>
+      
+    </div>
+  </div>
+</ion-content>

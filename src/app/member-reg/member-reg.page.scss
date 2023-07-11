@@ -1,3 +1,6 @@
+ion-toolbar {
+  padding: 3em 1em 1em;
+}
 .ctt-container {
     background-color: #F7F7F7;
     position: relative;
@@ -53,7 +56,7 @@
     border-left: 3px solid #F7F7F7;
   }
   
-  ion-button {
+  .btn-container ion-button {
     width: 15rem;
     height: 3rem;
     border-radius: 25px;

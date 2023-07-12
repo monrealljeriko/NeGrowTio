@@ -74,6 +74,25 @@ ion-segment-button.ios::part(native) {
   color: #08a391;
 }
 
+// modal 
+.custom-tbar {
+  padding: 3em 2em 1em;
+  
+}
+.custom-tbar .header-title {
+  color: #57708C;
+  font-size: 22px;
+
+  font-style: normal;
+  font-weight: 700;
+  line-height: 133.9%;
+  letter-spacing: 1.28px;
+}
+
+.custom-content {
+  margin: 0 2em;
+}
+
 // loan summary grid
 .custom-purpose {
   color: #1E1E1E;
@@ -110,3 +129,81 @@ ion-grid {
   height: 45vh;
   overflow-y: auto;
 }
+//apply loan
+.custom-btn {
+  margin-top: 10%;
+  width: 155px;
+  height: 45px;
+  margin-left: 2em;
+  --border-radius: 10px;
+  text-transform: initial;
+  --background: #57708C;
+
+}
+
+//loan calculator
+.custom-tbar {
+  color: #fff;
+  --background: #57708C;
+}
+.custom-tbar ion-title{
+  color: #fff;
+  font-size: 21px;
+  font-style: normal;
+  line-height: 133.9%;
+  letter-spacing: 2.56px;
+}
+.ctt-container {
+    background-color: #F7F7F7;
+    border-radius: 20px;
+    padding: 20px;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .ctt-container h1 {
+    color: #57708C;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 133.9%;
+  }
+  
+  .ctt-container h3 {
+    color: #57708C;
+    text-align: left;
+    font-size: 18px;
+    font-style: normal;
+    padding-left: 2rem;
+    font-weight: 500;
+    line-height: 133.9%;
+  }
+  .ctt-container ion-item ion-label {
+    color: #57708C;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 133.9%;
+  }
+  
+  p {
+    color: #AAA;
+    font-size: 15px;
+    font-style: normal;
+    margin-bottom: 0;
+    padding-left: 2rem;
+    font-weight: 500;
+    line-height: 133.9%;
+  }
+
+  ion-item {
+    margin: 0.5em 2em 0 2rem;
+    border-radius: 0.5rem;
+  }
+  ion-select ion-input {
+    color: #AAA;
+  }
+  

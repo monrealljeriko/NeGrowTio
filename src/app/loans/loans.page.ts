@@ -33,13 +33,13 @@ export class LoansPage implements OnInit {
           this.totalPayment = this.netProceedsFromLoan / 30;
           break;
         case 'weekly':
-          this.interestRate = 0.0325;
-          this.interestRateLabel = '3.25%';
+          this.interestRate = 0.02;
+          this.interestRateLabel = '2%';
           this.totalPayment = this.netProceedsFromLoan / 4;
           break;
         case 'monthly':
-          this.interestRate = 0.08;
-          this.interestRateLabel = '8%';
+          this.interestRate = 0.025;
+          this.interestRateLabel = '2.5%';
           this.totalPayment = this.netProceedsFromLoan / 1;
           break;
         default:
@@ -50,8 +50,8 @@ export class LoansPage implements OnInit {
       // asign specific interest per terms
       switch (this.numberOfPayments) {
         case 'daily':
-          this.interestRate = 0.025;
-          this.interestRateLabel = '2.5%';
+          this.interestRate = 0.0325;
+          this.interestRateLabel = '3.25%';
           this.totalPayment = this.netProceedsFromLoan / 60;
           break;
         case 'weekly':
@@ -60,8 +60,8 @@ export class LoansPage implements OnInit {
           this.totalPayment = this.netProceedsFromLoan / 8;
           break;
         case 'monthly':
-          this.interestRate = 0.08;
-          this.interestRateLabel = '8%';
+          this.interestRate = 0.05;
+          this.interestRateLabel = '5%';
           this.totalPayment = this.netProceedsFromLoan / 2;
           break;
         default:
@@ -72,13 +72,13 @@ export class LoansPage implements OnInit {
       // asign specific interest per terms
       switch (this.numberOfPayments) {
         case 'daily':
-          this.interestRate = 0.0325;
-          this.interestRateLabel = '3.25%';
+          this.interestRate = 0.055;
+          this.interestRateLabel = '5.5%';
           this.totalPayment = this.netProceedsFromLoan / 100;
           break;
         case 'weekly':
-          this.interestRate = 0.055;
-          this.interestRateLabel = '5.5%';
+          this.interestRate = 0.07;
+          this.interestRateLabel = '7%';
           this.totalPayment = this.netProceedsFromLoan / 14;
           break;
         case 'monthly':

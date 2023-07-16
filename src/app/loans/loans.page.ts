@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { Platform } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-loans',
   templateUrl: './loans.page.html',
   styleUrls: ['./loans.page.scss'],
 })
+
 export class LoansPage implements OnInit {
   // Declare and initialize the variables
   loanAmount: number = 0;
@@ -23,8 +26,9 @@ export class LoansPage implements OnInit {
   payableIN!: number;
   payableLabel!: string;
 
-  constructor() { }
+  constructor(private platform: Platform) { }
   ngOnInit() {}
+  
   
   // Implement the calculateTotals method
   calculateTotals() {
@@ -112,11 +116,19 @@ export class LoansPage implements OnInit {
           break;
       }
     }
+
+    // Calculate the finance charges
     this.totalFinanceCharge = parseFloat((this.loanAmount * this.interestRate).toFixed(2));
     this.totalNonFinanceCharges = 100; // Assuming insurance premium is 0, national fee is 100, documentary staff is 0, collection charge is 0
     this.serviceHandlingCharge = parseFloat((this.loanAmount * this.schInterest).toFixed(2));
     this.totalDeductionCharge = parseFloat((this.totalFinanceCharge + this.totalNonFinanceCharges + this.serviceHandlingCharge).toFixed(2));
     this.netProceedsFromLoan = parseFloat((this.loanAmount - this.totalDeductionCharge).toFixed(2));
+    
+    // Saved data from local storage
+    localStorage.setItem('loanAmount', this.loanAmount.toString());
+    localStorage.setItem('totalPayment', this.totalPayment.toString());
+    localStorage.setItem('purposeOfLoan', this.purposeOfLoan);
+    localStorage.setItem('payableLabel', this.payableLabel);
   }
 
   // Add additional properties

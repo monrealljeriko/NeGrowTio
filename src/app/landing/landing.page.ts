@@ -2,6 +2,7 @@ import { Component, } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { ProfilePage } from '../profile/profile.page';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-landing',
@@ -9,12 +10,42 @@ import { ProfilePage } from '../profile/profile.page';
   styleUrls: ['./landing.page.scss'],
 })
 export class LandingPage {
+  loanAmount: number = 0;
+  totalPayment: number = 0;
+  purposeOfLoan: string = 'Name of Purpose';
+  payableLabel: string = 'days';
 
-  constructor(private router: Router, private modalController: ModalController) {}
+  constructor(
+    private router: Router,
+    private modalController: ModalController,
+    private platform: Platform
+  ) {}
 
   selectedOption: string='';
   isModalOpen: boolean = false;
 
+  ionViewWillEnter() {
+    const savedLoanAmount = localStorage.getItem('loanAmount');
+    const savedtotalPayment = localStorage.getItem('totalPayment');
+    const savedpurposeOfLoan = localStorage.getItem('purposeOfLoan');
+    const savedpayableLabel = localStorage.getItem('payableLabel');
+    
+    // Access the saved data from local storage
+    if (savedLoanAmount) {
+      this.loanAmount = parseInt(savedLoanAmount, 10);
+    }
+    if (savedtotalPayment) {
+      this.totalPayment = parseInt(savedtotalPayment, 10);
+    }
+    if (savedpurposeOfLoan) {
+      this.purposeOfLoan = savedpurposeOfLoan;
+    }
+    if (savedpayableLabel) {
+      this.payableLabel = savedpayableLabel;
+    }
+  }
+  
+  
   setOpen(option: string) {
     this.selectedOption = option;
     this.isModalOpen = true;

@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, OnInit} from '@angular/core';
 import { IonTabs } from '@ionic/angular';
 
 @Component({
@@ -6,32 +6,45 @@ import { IonTabs } from '@ionic/angular';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
 
   constructor() {}
   @ViewChild(IonTabs) tabs!: IonTabs;
 
   showLabel: boolean = false;
+  //hold the currently active tab
   activeTab: string = 'home';
 
-  toggleLabel(tab: string) {
-    if (this.activeTab !== tab) {
-      this.activeTab = tab;
+  //retrieve the active tab 
+  ngOnInit() {
+    const storedTab = localStorage.getItem('activeTab');
+    if (storedTab) {
+      this.activeTab = storedTab;
     }
   }
   
-
-  handleTabChange(event: any) {
-    const selectedTab = this.tabs.getSelected();
-    if (selectedTab !== 'home') {
-      this.blurInputElement();
+  //method to store the selected tab
+  toggleLabel(tab: string) {
+    if (this.activeTab !== tab) {
+      this.activeTab = tab;
+      localStorage.setItem('activeTab', tab);
     }
   }
-
+  
+  
+  //method to remove the stored active tab
+  handleTabChange(event: any) {
+    const selectedTab = this.tabs.getSelected();
+    if (selectedTab === 'home') {
+      localStorage.removeItem('activeTab');
+    }
+  }
+  
+ /*  //  remove specific focus 
   blurInputElement() {
     const inputElement = document.querySelector('ion-input');
     if (inputElement) {
       inputElement.blur();
     }
-  }
+  } */
 }

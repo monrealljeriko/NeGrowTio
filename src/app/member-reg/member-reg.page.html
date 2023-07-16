@@ -1,15 +1,42 @@
 <ion-content [fullscreen]="true" class="custom-content">
   <form class="app-form">
     <div *ngIf="currentStep === 1">
-
-    <img src="assets/images/bg.png" alt="sanjose" class="bg">
-    <!-- Page 1 -->
+      <img src="assets/images/bg.png" alt="sanjose" class="bg">
+      <!-- Page 1 -->
       <div class="ctt-container">
         <div class="btn-view">
           <ion-button shape="round" class="view-req-btn" (click)="setOpen(true)">View Requirements</ion-button>
         </div>
+
+        <!-- modal notification -->
+        <ion-modal [isOpen]="isModalOpen">
+          <ng-template>
+            <ion-toolbar class="custom-tbar">
+              <ion-title>What you need and <br>what to bring</ion-title>
+              <ion-buttons slot="end">
+                <ion-button (click)="setOpen(false)">Close</ion-button>
+              </ion-buttons>
+            </ion-toolbar>
+            <ion-content class="ion-padding">
+              <div class="ctt-container-viewreq">
+                  <ion-item lines="none" class="custom-item">
+                    <ion-label>Membership form</ion-label>
+                  </ion-item >
+                  <ion-item lines="none" class="custom-item">
+                    <ion-label>Barangay Clearance</ion-label>
+                  </ion-item>
+                  <ion-item lines="none" class="custom-item">
+                    <ion-label>2x2 ID Picture</ion-label>
+                  </ion-item>
+                  <ion-item lines="none" class="custom-item">
+                    <ion-label>1x1 ID Picture</ion-label>
+                  </ion-item>
+              </div>
+            </ion-content>
+          </ng-template>
+        </ion-modal>
+
         <h1>Membership<br> Application Form</h1>
-        
         <ion-row>
           <ion-col>
             <h3>Personal Information</h3>
@@ -339,23 +366,4 @@
       </div>
     </div>
   </form>
-
-  <!-- modal notification -->
-  <ion-modal [isOpen]="isModalOpen">
-    <ng-template>
-      <ion-toolbar>
-        <ion-title>What you need and <br>what to bring</ion-title>
-        <ion-buttons slot="end">
-          <ion-button (click)="setOpen(false)">Close</ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-      <ion-content class="ion-padding">
-        <p>Membership form</p>
-        <p>Barangay Clearance</p>
-        <p>2x2 ID Picture</p>
-        <p>1x1 ID Picture</p>
-
-      </ion-content>
-    </ng-template>
-  </ion-modal>
 </ion-content>

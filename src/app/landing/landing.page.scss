@@ -1,8 +1,89 @@
+.custom-content {
+  --background: #F7F7F7;
+}
 ion-toolbar {
   padding: 3em 2em 1em;
 }
 .ion-notif {
   color: #57708C;
+}
+
+// notifications
+.custom-tbar {
+  color: #fff;
+  --background: #57708C;
+}
+.custom-tbar ion-title{
+  color: #fff;
+  font-size: 21px;
+  font-style: normal;
+  line-height: 133.9%;
+  letter-spacing: 2.56px;
+}
+.ctt-container {
+  background-color: #FFF;
+  position: relative;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.custom-item {
+  margin: 0.5em 1em 0 1rem;
+  border-radius: 0.5rem;
+  --background: #F7F7F7;
+}
+
+// survey
+
+ion-item {
+  margin: 0.5em 2em;
+  border-radius: 0.5rem;
+}
+.ctt-container-survey {
+  background-color: #F7F7F7;
+  position: relative;
+  height: 100vh;
+  border-top-right-radius: 20px;
+  padding: 20px;
+}
+p {
+  color: #AAA;
+  font-size: 15px;
+  font-style: normal;
+  margin-bottom: 0;
+  padding-left: 2rem;
+  font-weight: 500;
+  line-height: 133.9%;
+  padding-right: 1em;
+}
+ion-radio::part(container) {
+  width: 30px;
+  height: 30px;
+
+  border-radius: 8px;
+  border: 2px solid #ddd;
+}
+
+ion-radio::part(mark) {
+  background: none;
+  transition: none;
+  transform: none;
+  border-radius: 0;
+}
+
+ion-radio.radio-checked::part(container) {
+  background: #6815ec;
+  border-color: transparent;
+}
+
+ion-radio.radio-checked::part(mark) {
+  width: 6px;
+  height: 10px;
+
+  border-width: 0px 2px 2px 0px;
+  border-style: solid;
+  border-color: #fff;
+
+  transform: rotate(45deg);
 }
 
 /* .ion-prof {
@@ -47,7 +128,7 @@ ion-toolbar {
   letter-spacing: 1.92px;
 }
 .header-amt h1 {
-  padding: 0 20px 20px;
+  padding: 0 20px;
   margin: 0 0;
   color: #FFF;
   font-size: 32px;
@@ -55,6 +136,12 @@ ion-toolbar {
   font-weight: 600;
   line-height: 133.9%;
   letter-spacing: 2.56px;
+}
+.header-amt p {
+  margin-top: 0;
+  padding: 0 20px 25px;
+  color: #FFF;
+  font-size: 18px;
 }
 
 // segment

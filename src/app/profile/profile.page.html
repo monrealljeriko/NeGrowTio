@@ -1,16 +1,48 @@
 <ion-content [fullscreen]="true">
-  <div id="container">
-    <ion-toolbar>
-      <ion-title class="header-title">Profile</ion-title>
-      <img src="assets/icon/icon-profile.png" alt="profile" class="custom-prof">
-      
-    </ion-toolbar>
-
-    <strong>Ming Ming</strong>
-    <ion-icon name="create-outline" class="custom-icon"></ion-icon>
+  <ion-header>
+      <ion-icon name="arrow-back-circle-outline" class="custom-arrow" (click)="dismissModal()"></ion-icon>
+  </ion-header>
+  
+  <div class="header-profile">
+    <img src="assets/icon/icon-profile.png" alt="profile">
+    <h1>JOHN DOE</h1>
     <p>Member Since</p>
+  </div>
+  <div class="content-profile">
+    <h3>Settings</h3>
+    <ion-list [inset]="true">
+      <ion-item>
+        <ion-icon name="create-outline" class="custom-padding"></ion-icon>
+        <ion-label>Profile</ion-label>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="key-outline" class="custom-padding"></ion-icon>
+        <ion-label>Account</ion-label>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-item>
+    </ion-list>
+    
+  </div>
+  <div class="centered-item">
+    <ion-item [button]="true" (click)="logMeOut()" lines="none">
+      Logout 
+      <ion-icon name="log-out-outline" style="padding-left: 0.5em;"></ion-icon>
+    </ion-item>
+  </div>
 
-    <div class="information">
+  <!-- <div class="custom-tbar">
+      <img src="assets/icon/icon-profile.png" alt="profile">
+      <h1>JOHN DOE</h1>
+      <p>Member Since</p>
+  </div> -->
+  
+    
+  <!--   <div>
+
+    <ion-icon name="create-outline" class="custom-icon"></ion-icon>
+
+    <div>
       <p>Birthday</p>
       <p>Adress</p>
       <p>Number</p>
@@ -22,5 +54,5 @@
       </div>
       
     </div>
-  </div>
+  </div> -->
 </ion-content>

@@ -1,5 +1,7 @@
 import { Component, } from '@angular/core';
 import { Router } from '@angular/router';
+import { ModalController } from '@ionic/angular';
+import { ProfilePage } from '../profile/profile.page';
 
 @Component({
   selector: 'app-landing',
@@ -8,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class LandingPage {
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private modalController: ModalController) {}
 
   selectedOption: string='';
   isModalOpen: boolean = false;
@@ -24,7 +26,10 @@ export class LandingPage {
     this.selectedSegment = 'Week';
   }
 
-  goToProfile() {
-    this.router.navigate(['home/profile']);
+  async goToProfile() {
+    const modal = await this.modalController.create({
+      component: ProfilePage
+    });
+    return await modal.present();
   }
 }

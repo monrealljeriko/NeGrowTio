@@ -2,33 +2,33 @@
   <!-- tabs -->
   <div class="custom-tabs">
     <ion-tabs (ionTabsDidChange)="handleTabChange($event)">
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button  class="tab-button" (click)="toggleLabel('home')" [class.active]="activeTab === 'home'" tab="landing">
-      <div class="icon-container">
-        <ion-icon [name]="activeTab === 'home' ? 'home' : 'home-outline'"></ion-icon>
-        <ion-label>{{ activeTab === 'home' ? 'Home' : '' }}</ion-label>
-      </div>
-    </ion-tab-button>
-    <ion-tab-button  class="tab-button" (click)="toggleLabel('loans')" [class.active]="activeTab === 'loans'" tab="loans">
-      <div class="icon-container">
-        <ion-icon [name]="activeTab === 'loans' ? 'albums' : 'albums-outline'"></ion-icon>
-        <ion-label>{{ activeTab === 'loans' ? 'Loans' : '' }}</ion-label>
-      </div>
-    </ion-tab-button>
-    <ion-tab-button  class="tab-button" (click)="toggleLabel('credit')" [class.active]="activeTab === 'credit'" tab="credit">
-      <div class="icon-container">
-        <ion-icon [name]="activeTab === 'credit' ? 'timer' : 'timer-outline'"></ion-icon>
-        <ion-label>{{ activeTab === 'credit' ? 'Credit' : '' }}</ion-label>
-      </div>
-    </ion-tab-button>
-    <ion-tab-button  class="tab-button" (click)="toggleLabel('profile')" [class.active]="activeTab === 'profile'" tab="profile">
-      <div class="icon-container">
-        <ion-icon [name]="activeTab === 'profile' ? 'person' : 'person-outline'"></ion-icon>
-        <ion-label>{{ activeTab === 'profile' ? 'Profile' : '' }}</ion-label>
-      </div>
-    </ion-tab-button>
-  </ion-tab-bar>
-</ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button  class="tab-button" (click)="toggleLabel('home')" [class.active]="activeTab === 'home'" tab="landing">
+          <div class="icon-container">
+            <ion-icon class="active-icon" [name]="activeTab === 'home' ? 'home' : 'home-outline'"></ion-icon>
+            <ion-label [class.active]="activeTab === 'home'">{{ activeTab === 'home' ? 'Home' : '' }}</ion-label>
+          </div>
+        </ion-tab-button>
+        <ion-tab-button  class="tab-button" (click)="toggleLabel('loans')" [class.active]="activeTab === 'loans'" tab="loans">
+          <div class="icon-container">
+            <ion-icon class="active-icon" [name]="activeTab === 'loans' ? 'albums' : 'albums-outline'"></ion-icon>
+            <ion-label [class.active]="activeTab === 'loans'">{{ activeTab === 'loans' ? 'Loans' : '' }}</ion-label>
+          </div>
+        </ion-tab-button>
+        <ion-tab-button class="tab-button" (click)="toggleLabel('credit')" [class.active]="activeTab === 'credit'" tab="credit">
+          <div class="icon-container">
+            <ion-icon class="active-icon" [name]="activeTab === 'credit' ? 'timer' : 'timer-outline'"></ion-icon>
+            <ion-label [class.active]="activeTab === 'credit'">{{ activeTab === 'credit' ? 'Credit' : '' }}</ion-label>
+          </div>
+        </ion-tab-button>
+        <!-- <ion-tab-button  class="tab-button" (click)="toggleLabel('profile')" [class.active]="activeTab === 'profile'" tab="profile">
+          <div class="icon-container">
+            <ion-icon class="active-icon" [name]="activeTab === 'profile' ? 'person' : 'person-outline'"></ion-icon>
+            <ion-label [class.active]="activeTab === 'profile'">{{ activeTab === 'profile' ? 'Profile' : '' }}</ion-label>
+          </div>
+        </ion-tab-button> -->
+      </ion-tab-bar>
+    </ion-tabs>
 
     
   </div>

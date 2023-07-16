@@ -16,6 +16,19 @@ ion-toolbar {
     letter-spacing: 2.56px;
 }
 
+// more about credit info
+.custom-tbar {
+  color: #fff;
+  --background: #57708C;
+}
+.custom-tbar ion-title{
+  color: #fff;
+  font-size: 21px;
+  font-style: normal;
+  line-height: 133.9%;
+  letter-spacing: 2.56px;
+}
+
 // segment
 .custom-lbl {
     text-transform: initial;

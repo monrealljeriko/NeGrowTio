@@ -19,7 +19,9 @@ export class LoginPage {
       this.router.navigate(['home']);
     } else {
       // Show error message for invalid credentials
-      await this.showAlert('Invalid Credentials', 'Please enter valid username and password.');
+      //await this.showAlert('Invalid Credentials', 'Please enter valid username and password.');
+      this.router.navigate(['home']);
+      
     }
   }
 

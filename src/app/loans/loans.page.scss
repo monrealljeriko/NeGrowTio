@@ -129,29 +129,31 @@ ion-grid {
   height: 45vh;
   overflow-y: auto;
 }
+
 //apply loan
 .custom-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1.5em;
+  margin-top: 3em;
   border-radius: 1.5em;
 
 }
 .custom-btn ion-button {
-  --background: transparent;
+  //--background: transparent;
   box-shadow: none;
-  color: #57708C;
-  border-radius: 1.5em;
+  //color: #57708C;
+  color: #FFF;
+  --background: #57708C;
+  --border-radius: 1.5em;
   --box-shadow: none;
-
-  border: 2px solid #57708C;
+  //border: 2px solid #57708C;
   width: 15em;
-  height: 3em;
+  height: 3.5em;
   text-transform: none;
 }
 
-//loan calculator
+//apply loan calculator
 .custom-tbar {
   color: #fff;
   --background: #57708C;
@@ -195,10 +197,10 @@ ion-grid {
   padding-left: 1em;
 }
   
-  img {
+  /* img {
     width: 100%;
     height: auto;
-  }
+  } */
   .ctt-container h1 {
     color: #57708C;
     text-align: center;

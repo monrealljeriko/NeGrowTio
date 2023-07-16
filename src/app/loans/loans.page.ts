@@ -24,6 +24,7 @@ export class LoansPage implements OnInit {
   payableLabel!: string;
 
   constructor() { }
+  ngOnInit() {}
   
   // Implement the calculateTotals method
   calculateTotals() {
@@ -33,21 +34,21 @@ export class LoansPage implements OnInit {
         case 'Daily':
           this.interestRate = 0.0125;
           this.interestRateLabel = '1.25%';
-          this.totalPayment = this.loanAmount / 30;
+          this.totalPayment = parseFloat((this.loanAmount / 30).toFixed(2));
           this.payableIN = 30;
           this.payableLabel = 'days';
           break;
         case 'Weekly':
           this.interestRate = 0.02;
           this.interestRateLabel = '2%';
-          this.totalPayment = this.loanAmount / 4;
+          this.totalPayment = parseFloat((this.loanAmount / 4).toFixed(2));
           this.payableIN = 4;
           this.payableLabel = 'weeks';
           break;
         case 'Monthly':
           this.interestRate = 0.025;
           this.interestRateLabel = '2.5%';
-          this.totalPayment = this.loanAmount / 1;
+          this.totalPayment = parseFloat((this.loanAmount / 1).toFixed(2));
           this.payableIN = 1;
           this.payableLabel = 'mos';
           break;
@@ -61,21 +62,21 @@ export class LoansPage implements OnInit {
         case 'Daily':
           this.interestRate = 0.0325;
           this.interestRateLabel = '3.25%';
-          this.totalPayment = this.loanAmount / 60;
+          this.totalPayment = parseFloat((this.loanAmount / 60).toFixed(2));
           this.payableIN = 60;
           this.payableLabel = 'days';
           break;
         case 'Weekly':
           this.interestRate = 0.04;
           this.interestRateLabel = '4%';
-          this.totalPayment = this.loanAmount / 8;
+          this.totalPayment = parseFloat((this.loanAmount / 8).toFixed(2));
           this.payableIN = 8;
           this.payableLabel = 'weeks';
           break;
         case 'Monthly':
           this.interestRate = 0.05;
           this.interestRateLabel = '5%';
-          this.totalPayment = this.loanAmount / 2;
+          this.totalPayment = parseFloat((this.loanAmount / 2).toFixed(2));
           this.payableIN = 2;
           this.payableLabel = 'mos';
           break;
@@ -89,21 +90,21 @@ export class LoansPage implements OnInit {
         case 'Daily':
           this.interestRate = 0.055;
           this.interestRateLabel = '5.5%';
-          this.totalPayment = this.loanAmount / 100;
+          this.totalPayment = parseFloat((this.loanAmount / 100).toFixed(2));
           this.payableIN = 100;
           this.payableLabel = 'days';
           break;
         case 'Weekly':
           this.interestRate = 0.07;
           this.interestRateLabel = '7%';
-          this.totalPayment = this.loanAmount / 14;
+          this.totalPayment = parseFloat((this.loanAmount / 14).toFixed(2));
           this.payableIN = 14;
           this.payableLabel = 'weeks';
           break;
         case 'Monthly':
           this.interestRate = 0.08;
           this.interestRateLabel = '8%';
-          this.totalPayment = this.loanAmount / 3;
+          this.totalPayment = parseFloat((this.loanAmount / 3).toFixed(2));
           this.payableIN = 3;
           this.payableLabel = 'mos';
           break;
@@ -111,40 +112,18 @@ export class LoansPage implements OnInit {
           break;
       }
     }
-    this.totalFinanceCharge = this.loanAmount * this.interestRate;
+    this.totalFinanceCharge = parseFloat((this.loanAmount * this.interestRate).toFixed(2));
     this.totalNonFinanceCharges = 100; // Assuming insurance premium is 0, national fee is 100, documentary staff is 0, collection charge is 0
-    this.serviceHandlingCharge = this.loanAmount * this.schInterest;
-    this.totalDeductionCharge = this.totalFinanceCharge + this.totalNonFinanceCharges + this.serviceHandlingCharge;
+    this.serviceHandlingCharge = parseFloat((this.loanAmount * this.schInterest).toFixed(2));
+    this.totalDeductionCharge = parseFloat((this.totalFinanceCharge + this.totalNonFinanceCharges + this.serviceHandlingCharge).toFixed(2));
     this.netProceedsFromLoan = parseFloat((this.loanAmount - this.totalDeductionCharge).toFixed(2));
-
-    this.totalPayment = parseFloat(this.totalPayment.toFixed(2));
-    this.netProceedsFromLoan = parseFloat(this.netProceedsFromLoan.toFixed(2));
-    
   }
 
-    
   // Add additional properties
   showLabel: boolean = false;
   selectedOption: string = '';
   isModalOpen: boolean = false;
   selectedSegment: string = 'Week';
-
-  ngOnInit() {
-      localStorage.setItem('loanData', JSON.stringify({
-        loanAmount: this.loanAmount,
-        interestRateLabel: this.interestRateLabel,
-        interestRate: this.interestRate,
-        numberOfPayments: this.numberOfPayments,
-        term: this.term,
-        serviceHandlingCharge: this.serviceHandlingCharge,
-        totalFinanceCharge: this.totalFinanceCharge,
-        totalNonFinanceCharges: this.totalNonFinanceCharges,
-        totalDeductionCharge: this.totalDeductionCharge,
-        netProceedsFromLoan: this.netProceedsFromLoan,
-        totalPayment: this.totalPayment
-    }));
-    
-  }
 
   // Implement the toggleLabel method
   toggleLabel() {

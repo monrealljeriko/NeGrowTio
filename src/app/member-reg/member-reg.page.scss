@@ -87,6 +87,29 @@ ion-toolbar {
     margin-left: 10px;
 }
   // view requirement btn
+  .custom-tbar {
+    color: #fff;
+    --background: #57708C;
+  }
+  .custom-tbar ion-title{
+    color: #fff;
+    font-size: 21px;
+    font-style: normal;
+    line-height: 133.9%;
+    letter-spacing: 2.56px;
+  }
+  .ctt-container-viewreq {
+    background-color: #FFF;
+    position: relative;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .custom-item {
+    margin: 0.5em 1em 0 1rem;
+    border-radius: 0.5rem;
+    --background: #F7F7F7;
+  }
+
   .btn-view ion-button {
     width: 15rem;
     height: 3rem;

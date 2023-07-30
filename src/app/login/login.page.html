@@ -6,10 +6,12 @@
     <form class="login-form" (keydown.enter)="logMeIn()">
       <ion-item >
         <!-- <ion-label position="floating" class="custom-label">Email or username</ion-label> -->
+        <ion-icon name="mail-outline" class="custom-icon"></ion-icon>
         <ion-input type="text" labelPlacement="floating" label="Email or username" [(ngModel)]="Username" name="username" ></ion-input>
       </ion-item>
       <ion-item >
         <!-- <ion-label position="floating" class="custom-label">Password</ion-label> -->
+        <ion-icon name="lock-closed-outline" class="custom-icon"></ion-icon>
         <ion-input type="password" labelPlacement="floating" label="Password" [(ngModel)]="Password" name="password"></ion-input>
       </ion-item>
       <ion-row>

@@ -10,7 +10,7 @@ import { Platform } from '@ionic/angular';
   styleUrls: ['./landing.page.scss'],
 })
 export class LandingPage {
-  loanAmount: number = 0;
+  netProceedsFromLoan: number = 0;
   totalPayment: number = 0;
   purposeOfLoan: string = 'Name of Purpose';
   payableLabel: string = 'days';
@@ -24,15 +24,15 @@ export class LandingPage {
   selectedOption: string='';
   isModalOpen: boolean = false;
 
+  // Access the saved data from local storage
   ionViewWillEnter() {
-    const savedLoanAmount = localStorage.getItem('loanAmount');
+    const savednetProceedsFromLoan = localStorage.getItem('netProceedsFromLoan');
     const savedtotalPayment = localStorage.getItem('totalPayment');
     const savedpurposeOfLoan = localStorage.getItem('purposeOfLoan');
     const savedpayableLabel = localStorage.getItem('payableLabel');
     
-    // Access the saved data from local storage
-    if (savedLoanAmount) {
-      this.loanAmount = parseInt(savedLoanAmount, 10);
+    if (savednetProceedsFromLoan) {
+      this.netProceedsFromLoan = parseInt(savednetProceedsFromLoan, 10);
     }
     if (savedtotalPayment) {
       this.totalPayment = parseInt(savedtotalPayment, 10);
@@ -44,7 +44,12 @@ export class LandingPage {
       this.payableLabel = savedpayableLabel;
     }
   }
-  
+  // cler the saved data
+  ngOnInit() {
+    window.onbeforeunload = () => {
+      localStorage.clear();
+    };
+  }
   
   setOpen(option: string) {
     this.selectedOption = option;

@@ -20,7 +20,7 @@ export class LoansPage implements OnInit {
   totalFinanceCharge!: number;
   totalNonFinanceCharges!: number;
   totalDeductionCharge!: number;
-  netProceedsFromLoan!: number;
+  netProceedsFromLoan: number = 0;
   totalPayment: number = 0;
   schInterest: number = 0.02;
   payableIN!: number;
@@ -45,7 +45,7 @@ export class LoansPage implements OnInit {
         case 'Weekly':
           this.interestRate = 0.02;
           this.interestRateLabel = '2%';
-          this.totalPayment = parseFloat((this.loanAmount / 4).toFixed(2));
+          this.totalPayment = parseFloat((this.loanAmount / 4.29).toFixed(2));
           this.payableIN = 4;
           this.payableLabel = 'weeks';
           break;
@@ -73,7 +73,7 @@ export class LoansPage implements OnInit {
         case 'Weekly':
           this.interestRate = 0.04;
           this.interestRateLabel = '4%';
-          this.totalPayment = parseFloat((this.loanAmount / 8).toFixed(2));
+          this.totalPayment = parseFloat((this.loanAmount / 8.57).toFixed(2));
           this.payableIN = 8;
           this.payableLabel = 'weeks';
           break;
@@ -125,7 +125,7 @@ export class LoansPage implements OnInit {
     this.netProceedsFromLoan = parseFloat((this.loanAmount - this.totalDeductionCharge).toFixed(2));
     
     // Saved data from local storage
-    localStorage.setItem('loanAmount', this.loanAmount.toString());
+    localStorage.setItem('netProceedsFromLoan', this.netProceedsFromLoan.toString());
     localStorage.setItem('totalPayment', this.totalPayment.toString());
     localStorage.setItem('purposeOfLoan', this.purposeOfLoan);
     localStorage.setItem('payableLabel', this.payableLabel);
